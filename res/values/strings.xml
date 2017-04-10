@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">LocationFinder</string>
+    <string name="hitta_sal">Hitta sal</string>
+    <string name="or">OR:</string>
+    <string name="ni">NI:</string>
+    <string name="g8">G8:</string>
+    <string name="type_your_room">Room Number</string>
+
+
+    <string-array name="location_array">
+        <item>Välj byggnad</item>
+        <item>Orkanen</item>
+        <item>Niagara</item>
+        <item>Gäddan</item>
+    </string-array>
+
+</resources>
