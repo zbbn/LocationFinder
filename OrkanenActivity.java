@@ -58,9 +58,7 @@ public class OrkanenActivity extends AppCompatActivity {
                 image.setImageResource(R.drawable.wrong_room);
             } else if (String.valueOf(res.charAt(1)).equals("1") || String.valueOf(res.charAt(1)).equals("2") || String.valueOf(res.charAt(1)).equals("3") ||
                     String.valueOf(res.charAt(1)).equals("4") || String.valueOf(res.charAt(1)).equals("5")) {
-                if (res.length() == 1 || res.length() >= 5) {
-                    image.setImageResource(R.drawable.wrong_room);
-                } else if (res.length() > 1) {
+                if (res.length() > 1) {
                     // OM ABC OCH 1***
                     try {
                         URL ORABC1 = new URL("https://ddwap.mah.se/AG2465/ORA" + String.valueOf(res.charAt(1)) + ".png");
@@ -77,9 +75,7 @@ public class OrkanenActivity extends AppCompatActivity {
                 image.setImageResource(R.drawable.wrong_room);
             } else if (String.valueOf(res.charAt(1)).equals("1") || String.valueOf(res.charAt(1)).equals("2") || String.valueOf(res.charAt(1)).equals("3") ||
                     String.valueOf(res.charAt(1)).equals("4") || String.valueOf(res.charAt(1)).equals("5")) {
-                if (res.length() == 1 || res.length() >= 5) {
-                    image.setImageResource(R.drawable.wrong_room);
-                } else if (res.length() > 1) {
+                if (res.length() > 1) {
                     // OM DEF/def och 1***
                     try {
                         URL ORDEF1 = new URL("https://ddwap.mah.se/AG2465/ORD" + String.valueOf(res.charAt(1)) + ".png");
@@ -96,4 +92,6 @@ public class OrkanenActivity extends AppCompatActivity {
         }
     }
 }
+
+
 
