@@ -26,7 +26,8 @@
 
         <activity
             android:name=".MainActivity"
-            android:label="MainActivity" >
+            android:label="Temporary: Building chooser"
+            android:parentActivityName=".HomeActivity">
 
             <!-- The meta-data tag is required if you support API level 15 and lower -->
             <meta-data
