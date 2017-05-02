@@ -1,0 +1,49 @@
+ public void showroom(View view) {
+        hideKeyboard(this);
+
+        String res = roomId.getText().toString();
+
+        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+        StrictMode.setThreadPolicy(policy);
+
+
+
+        if (res.startsWith("A") || res.startsWith("B") || res.startsWith("C") || res.startsWith("a") || res.startsWith("b") || res.startsWith("c")) {
+            if (res.length() == 1 || res.length() >= 5) {
+                image.setImageResource(R.drawable.wrong_room);
+
+            } else if (String.valueOf(res.charAt(1)).equals("1") || String.valueOf(res.charAt(1)).equals("2") || String.valueOf(res.charAt(1)).equals("3") ||
+                    String.valueOf(res.charAt(1)).equals("4") || String.valueOf(res.charAt(1)).equals("5")) {
+                if (res.length() > 1) {
+                    // OM ABC OCH 1***
+                    try {
+                        URL ORABC1 = new URL("https://ddwap.mah.se/AG2465/ORA" + String.valueOf(res.charAt(1)) + ".png");
+                        Bitmap bmp = BitmapFactory.decodeStream(ORABC1.openConnection().getInputStream());
+                        image.setImageBitmap(bmp);
+                    } catch (MalformedURLException e) {
+                    } catch (IOException e) {
+                    }
+                }
+            }
+        } else if (res.startsWith("D") || res.startsWith("E") || res.startsWith("F") || res.startsWith("d") || res.startsWith("e") || res.startsWith("f")) {
+            if (res.length() == 1 || res.length() >= 5) {
+                image.setImageResource(R.drawable.wrong_room);
+            } else if ( String.valueOf(res.charAt(1)).equals("1") || String.valueOf(res.charAt(1)).equals("2") || String.valueOf(res.charAt(1)).equals("3") ||
+                    String.valueOf(res.charAt(1)).equals("4") || String.valueOf(res.charAt(1)).equals("5")) {
+                if (res.length() > 1) {
+                    // OM DEF/def och 1***
+                    try {
+                        URL ORDEF1 = new URL("https://ddwap.mah.se/AG2465/ORD" + String.valueOf(res.charAt(1)) + ".png");
+                        Bitmap bmp = BitmapFactory.decodeStream(ORDEF1.openConnection().getInputStream());
+                        image.setImageBitmap(bmp);
+                    } catch (MalformedURLException e) {
+                    } catch (IOException e) {
+                    }
+                }
+            }
+        } else {
+            image.setImageResource(R.drawable.wrong_room);
+            point.setX(200);
+            point.setY(400);
+        }
+    }
